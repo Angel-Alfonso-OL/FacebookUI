@@ -24,6 +24,7 @@ class QuickButton extends StatelessWidget {
         borderRadius: BorderRadius.circular(30),
       ),
       child: Row(
+        mainAxisSize: MainAxisSize.min,
         children: [
           CircleButton(
             color: color.withOpacity(0.6),
