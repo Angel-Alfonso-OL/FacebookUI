@@ -1,5 +1,7 @@
-import 'package:facebook_ui/facebook_ui/widgets/avatar.dart';
+
 import 'package:facebook_ui/facebook_ui/widgets/circle_button.dart';
+import 'package:facebook_ui/facebook_ui/widgets/quick_action.dart';
+import 'package:facebook_ui/facebook_ui/widgets/what_is_on_your_mind.dart';
 import 'package:facebook_ui/icons/custom_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -49,13 +51,19 @@ class FacebookUI extends StatelessWidget {
         ],
       ),
       body: ListView(
+        padding: const EdgeInsets.symmetric(
+          horizontal: 20,
+          vertical: 20,
+        ).copyWith(
+          top: 15,
+        ),
         children: const [
-          Avatar(
-            size: 100,
-            asset: "assets/users/1.jpg",
-          ),
+          WhatIsOnYourMind(),
+          SizedBox(height: 30,),
+          QuickActions(),
         ],
       ),
     );
   }
 }
+
