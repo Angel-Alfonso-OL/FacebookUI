@@ -1,3 +1,4 @@
+import 'package:facebook_ui/facebook_ui/widgets/avatar.dart';
 import 'package:facebook_ui/facebook_ui/widgets/circle_button.dart';
 import 'package:facebook_ui/icons/custom_icons.dart';
 import 'package:flutter/material.dart';
@@ -45,6 +46,14 @@ class FacebookUI extends StatelessWidget {
             icon: CustomIcons.messenger,
           ),
           SizedBox(width: 15),
+        ],
+      ),
+      body: ListView(
+        children: const [
+          Avatar(
+            size: 100,
+            asset: "assets/users/1.jpg",
+          ),
         ],
       ),
     );
