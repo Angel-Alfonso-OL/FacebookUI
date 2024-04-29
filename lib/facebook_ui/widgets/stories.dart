@@ -1,3 +1,5 @@
+import 'package:facebook_ui/facebook_ui/widgets/avatar.dart';
+import 'package:facebook_ui/facebook_ui/widgets/story_item.dart';
 import 'package:facebook_ui/model/story.dart';
 import 'package:flutter/material.dart';
 
@@ -22,6 +24,11 @@ final _stories = [
     avatar: "assets/users/4.jpg",
     username: "Mario",
   ),
+  Story(
+    bg: "assets/wallpapers/5.jpeg",
+    avatar: "assets/users/5.jpg",
+    username: "Angel",
+  ),
 ];
 
 class Stories extends StatelessWidget {
@@ -30,18 +37,14 @@ class Stories extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 170,
+      height: 160,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
         itemBuilder: (_, index) {
           final story = _stories[index];
-          return Container(
-            width: 80,
-            margin: const EdgeInsets.symmetric(
-              horizontal: 5,
-            ),
-            height: double.infinity,
-            color: Colors.amber,
+          return StoryItem(
+            story: story,
+            isFirst: index == 0,
           );
         },
         itemCount: _stories.length,
@@ -49,3 +52,4 @@ class Stories extends StatelessWidget {
     );
   }
 }
+
