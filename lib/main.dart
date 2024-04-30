@@ -10,8 +10,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-     // theme: ThemeData(fontFamily: ""),
+    return MaterialApp(
+      theme: ThemeData(
+        
+        fontFamily: "Nunito",
+      ),
       debugShowCheckedModeBanner: false,
       home: FacebookUI(),
     );
