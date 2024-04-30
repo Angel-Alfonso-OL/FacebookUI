@@ -1,4 +1,5 @@
 import 'package:facebook_ui/facebook_ui/facebook_ui.dart';
+import 'package:facebook_ui/facebook_ui/widgets/aspect_ratio.dart';
 import 'package:flutter/material.dart';
 
 void main() {
